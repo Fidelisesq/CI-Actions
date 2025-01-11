@@ -1,18 +1,16 @@
 name: Checkout
+
 on: [push]
 
 jobs:
-    checkout-and-display-files:
-        runs-on: ubuntu-latest
-        steps:
-            - name: List Files Before
-              run: ls -a
-            - name: Checkout
-              run:  |
-                git init
-                git remote add origin "http://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com"
-                git fetch origin
-                git checkout main
-            - name: List Files After
-              run: ls -a
-              
+  checkout-and-display-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: List Files Before
+        run: ls -a
+
+      - name: List Files After
+        run: ls -a
