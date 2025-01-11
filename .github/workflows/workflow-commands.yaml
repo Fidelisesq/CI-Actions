@@ -1,6 +1,6 @@
 name: Workflow Commands
-on: [push]
 
+on: [push]
 
 jobs:
   testing-wf-commands:
@@ -8,4 +8,9 @@ jobs:
     steps:
       - name: Setting an error message
         run: "::error:: Missing semicolon"
-     
+        
+      - name: Debug - List files
+        run: ls -la
+
+      - name: Debug - Print environment variables
+        run: env
