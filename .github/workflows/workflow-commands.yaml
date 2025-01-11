@@ -14,5 +14,13 @@ jobs:
         run: echo "::notice title:Error title,file=app.js, line=2, endLine=3, col=5, endColumn=7::Missing Semicolon"
       - name: Setting an debug message with parameters
         run: echo "::debug title:Error title,file=app.js, line=2, endLine=3, col=5, endColumn=7::Missing Semicolon"
-
+      - name: Group of logs
+        run: ¦
+          echo "::group::My group title"
+          echo "Inside group"
+          echo "::endgroup::"
+      - name: Masking a value
+        run: echo "::add-mask::String"
+      - name: echo a secret
+        run: echo "Secret String"
         
