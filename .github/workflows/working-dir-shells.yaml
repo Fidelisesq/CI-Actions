@@ -37,4 +37,6 @@ jobs:
       - name: Python Shell
         shell: python
         run:  |
+          import platform
+          print(platform.processor())
 
