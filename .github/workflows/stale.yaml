@@ -1,7 +1,6 @@
 name: Stale Issues & RPs
 on:
   schedule:
-    - cron: "0 14 * * *"
     - cron: "0/5 * * * *" #Every 5 minutes
   
 jobs:
