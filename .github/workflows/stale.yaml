@@ -1,4 +1,4 @@
-name: Stale Issues & RPs
+name: Mark Stale PRs
 on:
   schedule:
     - cron: "0/5 * * * *" #Every 5 minutes
